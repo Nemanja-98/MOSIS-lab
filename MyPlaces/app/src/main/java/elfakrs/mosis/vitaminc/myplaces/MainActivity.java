@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -16,7 +17,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    static int NEW_PLACE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(MainActivity.this, EditMyPlaceActivity.class);
+                startActivityForResult(i, NEW_PLACE);
             }
         });
     }
@@ -51,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.action_show_map)
             Toast.makeText(this, "Action: Show Map", Toast.LENGTH_SHORT).show();
         if(id == R.id.action_new_place)
-            Toast.makeText(this, "Action: New Place", Toast.LENGTH_SHORT).show();
+        {
+            Intent edit_intent = new Intent(this, EditMyPlaceActivity.class);
+            startActivityForResult(edit_intent, NEW_PLACE);
+        }
         if(id == R.id.action_my_places_list)
         {
             Intent my_places_intent = new Intent(this, MyPlacesList.class);
@@ -63,5 +67,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(about_intent);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK)
+            Toast.makeText(this, "New place added", Toast.LENGTH_SHORT).show();
     }
 }

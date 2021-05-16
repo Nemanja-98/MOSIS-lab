@@ -20,4 +20,11 @@
     <string name="hello_second_fragment">Hello from another World! Arg: %1$s</string>
     <string name="title_activity_my_places_list">MyPlacesList</string>
     <string name="title_activity_main2">MainActivity</string>
+    <string name="title_activity_edit_my_place">EditMyPlaceActivity</string>
+    <string name="edit_my_place_name_label">Name:</string>
+    <string name="edit_my_place_description_label">Description:</string>
+    <string name="edit_my_place_finish_label">Finish</string>
+    <string name="edit_my_place_cancel_label">Cancel</string>
+    <string name="title_activity_view_my_place">ViewMyPlaceActivity</string>
+    <string name="viewMyPlace_button_finished">OK</string>
 </resources>
