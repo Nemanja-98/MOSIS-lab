@@ -145,7 +145,7 @@ public class MyPlacesMapsActivity extends AppCompatActivity {
         mapController = map.getController();
         if(mapController != null)
         {
-            mapController.setZoom(15.0);
+            mapController.setZoom(20.0);
             GeoPoint startPoint = new GeoPoint(43.3209, 21.8958);
             mapController.setCenter(startPoint);
         }
@@ -156,7 +156,7 @@ public class MyPlacesMapsActivity extends AppCompatActivity {
         mapController = map.getController();
         if(mapController != null)
         {
-            mapController.setZoom(15.0);
+            mapController.setZoom(20.0);
             mapController.animateTo(placeLoc);
         }
     }
@@ -172,7 +172,7 @@ public class MyPlacesMapsActivity extends AppCompatActivity {
                 mapController = map.getController();
                 if(mapController != null)
                 {
-                    mapController.setZoom(15.0);
+                    mapController.setZoom(20.0);
                     mapController.setCenter(new GeoPoint(43.3209, 21.8958));
                 }
                 setOnMapClickOverlay();
@@ -183,7 +183,7 @@ public class MyPlacesMapsActivity extends AppCompatActivity {
                 setCenterPlaceOnMap();
                 break;
         }
-//        showMyPlaces();
+        showMyPlaces();
     }
 
     private void setMyLocationOverlay()
@@ -194,7 +194,7 @@ public class MyPlacesMapsActivity extends AppCompatActivity {
         mapController = map.getController();
         if(mapController != null)
         {
-            mapController.setZoom(15.0);
+            mapController.setZoom(20.0);
             myLocationOverlay.enableFollowLocation();
         }
     }
@@ -207,6 +207,7 @@ public class MyPlacesMapsActivity extends AppCompatActivity {
             case PERMISSION_ACCESS_FINE_LOCATION: {
                 if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 {
+
 //                    setMyLocationOverlay();
 //                    setOnMapClickOverlay();
                     setupMap();
@@ -348,5 +349,7 @@ public class MyPlacesMapsActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == Activity.RESULT_OK)
+            showMyPlaces();
     }
 }

@@ -76,7 +76,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/editMyPlace_button_locatiion"
+            android:id="@+id/editMyPlace_button_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit_my_place_location_label" />

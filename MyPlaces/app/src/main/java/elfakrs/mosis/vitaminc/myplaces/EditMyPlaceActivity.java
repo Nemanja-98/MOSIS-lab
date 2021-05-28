@@ -22,6 +22,7 @@ import android.widget.Toolbar;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
@@ -63,32 +64,6 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
             editMode = false;
         }
 
-
-//        FragmentFirst2Binding childBind = FragmentFirst2Binding.inflate(getLayoutInflater());
-//
-//        childBind.editMyPlaceButtonFinish.setOnClickListener(this);
-//
-//        childBind.editMyPlaceButtonFinish.setEnabled(false);
-//
-//        childBind.editMyPlaceEditTextName.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                childBind.editMyPlaceButtonFinish.setEnabled(s.length()>0);
-//            }
-//        });
-//
-//        childBind.editMyPlaceButtonCancel.setOnClickListener(this);
-
         Button btn_finish = (Button)findViewById(R.id.editMyPlace_button_finish);
         btn_finish.setOnClickListener(this);
 
@@ -124,7 +99,7 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
             EditText et_description = (EditText)findViewById(R.id.editMyPlace_editText_description);
             et_description.setText(place.getDescription());
         }
-        Button btn_location = (Button)findViewById(R.id.editMyPlace_button_locatiion);
+        Button btn_location = (Button)findViewById(R.id.editMyPlace_button_location);
         btn_location.setOnClickListener(this);
     }
 
@@ -170,7 +145,7 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
                 finish();
                 break;
             }
-            case R.id.editMyPlace_button_locatiion:{
+            case R.id.editMyPlace_button_location:{
                 Intent map_intent = new Intent(this, MyPlacesMapsActivity.class);
                 map_intent.putExtra("state", MyPlacesMapsActivity.SELECT_COORDINATES);
                 startActivityForResult(map_intent, 1);
