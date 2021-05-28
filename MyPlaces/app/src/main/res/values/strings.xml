@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MyPlaces</string>
+    <string name="action_show_map">Show Map</string>
+    <string name="action_new_place">New Place</string>
+    <string name="action_my_places_list">My Places</string>
+    <string name="action_about">About</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="aboout_text">
+        <i>My places</i> is the application that will help you remember characteristics and locations of your favorite places. It will be able to show
+        your places on map and enable you to share them with your friends. Each week this application will be better and better and you will earn <i>points</i>
+        from your teaching assistant.
+    </string>
+    <string name="about_button_text">Ok</string>
+
+    <string name="hello_first_fragment">My Places</string>
+    <string name="hello_second_fragment">Hello from another World! Arg: %1$s</string>
+    <string name="title_activity_my_places_list">MyPlacesList</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_activity_edit_my_place">EditMyPlaceActivity</string>
+    <string name="edit_my_place_name_label">Name:</string>
+    <string name="edit_my_place_description_label">Description:</string>
+    <string name="edit_my_place_finish_label">Finish</string>
+    <string name="edit_my_place_cancel_label">Cancel</string>
+    <string name="edit_my_place_lat_label">Latitude:</string>
+    <string name="edit_my_place_lon_label">Longitude:</string>
+    <string name="edit_my_place_location_label">Get Location</string>
+    <string name="title_activity_view_my_place">ViewMyPlaceActivity</string>
+    <string name="viewMyPlace_button_finished">OK</string>
+    <string name="title_activity_my_places_maps">MyPlacesMapsActivity</string>
+</resources>
