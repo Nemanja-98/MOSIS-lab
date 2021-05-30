@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1060879548184",
+    "project_id": "myplaces-mosis",
+    "storage_bucket": "myplaces-mosis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060879548184:android:df13f02396edae17d5a86d",
+        "android_client_info": {
+          "package_name": "elfakrs.mosis.vitaminc.myplaces"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060879548184-samou547rp4v24qmn1s8tbf4j9m55rc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN6ZGLiBqVE1UvrhCE0xyesw9EKTQeQ5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060879548184-samou547rp4v24qmn1s8tbf4j9m55rc0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
